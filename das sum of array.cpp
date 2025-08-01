@@ -1,24 +1,31 @@
-//DIV-A
-//ROLL NO: 16
-// write a c++ program to find sum elements in an array otherwise its time complexity using its frequency count
+// NAME-Sanskar Karale
+// DIV-A
+// ROLL NO: 16
+// Write a C++ program to find the sum of elements in an array and analyze its time complexity using its frequency count.
 
-#include <iostream>
+
+#include <iostream> 
 using namespace std;
-
 int main() {
     int a[10];
-    
-    cout << "Enter an element of the array: ";
-    
-    for(int i = 0; i < 10; i++)
-    {
+    int sum = 0; 
+    cout << "Enter the elements of the array: " << endl;
+
+    for (int i = 0; i < 10; i++) {
         cin >> a[i];
     }
-     
-    for(int i = 0; i < 10; i++) {
-        cout << a[i] ;
+
+    cout << "The elements of the array are: ";
+    for (int i = 0; i < 10; i++) {
+        cout << a[i] << " ";
+    }
+     cout << endl;
+
+    for (int i = 0; i < 10; i++) {
+        sum += a[i];
     }
 
+    cout << "The sum of the elements in the array is: " << sum << endl;
 
     return 0;
 }
