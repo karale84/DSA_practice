@@ -58,6 +58,13 @@ else
     
 }
 }
+void peek() {
+    if (isempty()) {
+        cout << "Cannot peek, stack is empty" << endl;
+    } else {
+        cout << arr[top] << " is at the top of the stack" << endl;
+    }
+}
 
 };
 int main(){
