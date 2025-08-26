@@ -1,6 +1,6 @@
 #include  <iostream>
 #define max 10
-using namespace std;
+using namespace std; 
 class stack{
     private:
     int arr[max];
