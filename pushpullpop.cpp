@@ -1,6 +1,6 @@
 #include  <iostream>
 #define max 10
-using namespace std; 
+using namespace std;
 class stack{
     private:
     int arr[max];
@@ -9,7 +9,7 @@ class stack{
 
 
     public:
-    
+
     stack(){
         top=-1;
 
@@ -64,11 +64,29 @@ void peek() {
     } else {
         cout << arr[top] << " is at the top of the stack" << endl;
     }
-}
+} 
 
 };
 int main(){
     stack s1;
-s1.push();
+    int operation;
+    cout<<"enter a operation:\n 1. Push \n 2. Peek \n 3. Pop \n";
+    cin>>operation;
+switch(operation){
+    
+    
+    case 1:
+    cout<<"push operation";
+    s1.push();
+    break;
+    case 2:
+    cout<<"peek operation";
+    s1.peek();
+    break;
+    case 3:
+    cout<<"pop operation";
+    s1.pop();
+break;
+}
 return 0;
 }
