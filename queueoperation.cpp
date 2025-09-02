@@ -40,7 +40,7 @@ class Queue {
         }
         else
         {
-            cout<<"Enter the value: ";
+            cout<<" Enter the value: ";
             cin>>m;
             if(isempty())
             {
@@ -54,13 +54,53 @@ class Queue {
             }
             cout<<m<<" is inserted in the queue.";
         }
-    
     }
+
+    void dequeue()
+    {
+        if(isempty())
+        {
+            cout<<"Queue is underflow\n";
+        }
+        else
+        {
+            if(front == rear)
+            {
+                front = -1;
+                rear = -1;
+            }
+            else{
+                front++;
+            }
+        }
 };
-int main() {
-    Queue q1;
-    q1.isempty();
-    q1.isfull();
-    q1.enqueue();
+    int main(){
+    Queue s1;
+    int operation;
+    while(true){
+        cout<<" enter a operation:\n 1. enqueue \n 2. dequeue \n 3.Exit";
+        cin>>operation;
+switch(operation){
+    
+    
+    case 1:
+    cout<<"enqueue an element";
+    s1.enqueue();
+    break;
+
+    case 2:
+    cout<<"dequeue an element";
+    s1.dequeue();
+    break;
+
+    case 3:
+    cout<<"exiting";
+    break;
+
+    default:
+    cout<<"invalid choice";
+    }
+    }
     return 0;
-}
+    }
+
